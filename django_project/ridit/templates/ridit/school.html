@@ -1,0 +1,55 @@
+{% extends "ridit/base.html" %}
+{% load static %}
+  {% block content %}
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-12 text-center mt-5">
+          <h1 class='navbar-brand'> Book A Class </h1>
+        </div>
+        <div class="col-12 col-sm-6 offset-sm-3 mt-5">
+          <form method="post" action="#" class='was-validated' >
+            {% csrf_token %}
+            <div class="form-floating mb-4 mt-4">
+              <input name="Name" type="text" class="form-control"  placeholder="your name" required>
+              <label>Name</label>
+            </div>
+            
+            <div class="form-floating mb-4">
+              <input name="Email" type="email" class="form-control" placeholder="Email" required>
+              <label>Email</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input name="Mobile" type="tel" class="form-control" placeholder="Mobile Number" required>
+              <label>Mobile Number</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input name="Vehicle" type="text" class="form-control" placeholder="Vehicle Type" required>
+              <label>vehicle you want to lean Riding</label>
+            </div>
+
+
+            <div class="form-floating mb-4">
+              <input name="Gender" type="text" class="form-control" placeholder="Gender" required>
+              <label>Your Gender</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input name="Date" type="date" class="form-control" placeholder="Expected Date">
+              <label>Expected Date To Start Learning</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input name="City" type="text" class="form-control" placeholder="City" required>
+              <label>City</label>
+            </div>
+
+            <button class="btn btn-lg btn-success text-white" type="submit">
+              Book A Class
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% endblock content %}
