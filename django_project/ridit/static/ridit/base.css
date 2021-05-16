@@ -67,3 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #4154f1!important;
   text-decoration: none!important;
 }
+
+.footer ul{
+  list-style: none!important;
+}

@@ -13,7 +13,7 @@ $(document).ready(function(){
   });
 
   $(window).scroll(function() { 
-    if ($(document).scrollTop() > 30) { 
+    if ($(document).scrollTop() > 50) { 
       $(".fixed-top").css("background-color", "#FFFFFF"); 
     } else {
       $(".fixed-top").css("background-color", "transparent");
