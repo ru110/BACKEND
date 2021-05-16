@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
   path('',views.home,name='ridit-home'),
-  path('',views.schools,name='schools'),
+  path('',views.school,name='school'),
+  path('success/',views.success,name='success'),
 ]

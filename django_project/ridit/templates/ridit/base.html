@@ -51,14 +51,14 @@
             <a class="nav-link" href="{% url 'school' %}">Driving School</a>
           </li>
           
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#services">Our Services</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
-          
+          -->
           
           {% if user.is_authenticated %}
             <li class="nav-item">
@@ -77,19 +77,19 @@
       </div>
     </div>
   </nav>
-  <section class='container'>
-    <div class="row">
-      <div class="col-12">
+  <!-- <section class='container mt-5'>
+    <div class="row mt-5">
+      <div class="col-12 mt-5">
         {% if messages %}
           {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
               {{ message }}
             </div>
           {% endfor %}
         {% endif %}
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   {% block content %}{% endblock %}
