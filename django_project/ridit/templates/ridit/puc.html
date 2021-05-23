@@ -7,27 +7,17 @@
 <form action="" method="post" autocomplete="off">
     {% csrf_token %}
     {{form.name|as_crispy_field}}
-    {{form.email|as_crispy_field}}
-    {{form.mobile|as_crispy_field}}
-    {{form.vehicle|as_crispy_field}}
+    {{form.contact|as_crispy_field}}
+    {{form.vehicle_no|as_crispy_field}}
     <div class="row">
         <div class="col-md-8">
             {{form.city|as_crispy_field}}
         </div>
         <div class="col-md-4">
-            {{form.days|as_crispy_field}}
+            {{form.exp_date|as_crispy_field}}
         </div>
     </div>
-   
-    <div class="row">
-        <div class="col-md-4">
-            {{form.date|as_crispy_field}}
-        </div>
-        <div class="col-md-8">
-            {{form.gender|as_crispy_field}}
-        </div>
-       
-    </div>
+ 
     <div class="row">
         <div class="col-md-8">
             <button type="submit" class="btn btn-success btn-block btn-lg" ><i class="fas fa-database"></i>

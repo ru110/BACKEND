@@ -16,6 +16,11 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('', include('ridit.urls')),
     path('school/', ridit_views.school, name='school'),
+    path('puc/', ridit_views.puc, name='puc'),
+    path('chauffer/', ridit_views.chauffer, name='chauffer'),
+    path('partner/', ridit_views.partner, name='partner'),
+    path('ch/', ridit_views.ch, name='ch'),
+    path('success/', ridit_views.ch, name='success'),
     path('custom/', demo_views.custom , name='custom'),
     #path('empform/',emp_views.empform,name='empform'),
     path('jsi18n', JavaScriptCatalog.as_view(), name='javascript-catalog'),#for datepicker functionality in forms
