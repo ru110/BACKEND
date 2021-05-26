@@ -1,13 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-# Create your models here.
-# def validate_mail(value):
-#     if "@gmail.com" in value:
-#         return value
-#     else:
-#         raise ValidationError("This field accepts mail id of google only")
-
 
 class Vehicle(models.Model):
   id = models.IntegerField(primary_key=True,unique =  True)
@@ -23,20 +16,21 @@ class City(models.Model):
   def __str__(self):
     return self.title
 
-# ,validators =[validate_mail]
 class School(models.Model):
   name = models.CharField(max_length=200)
   email = models.EmailField(max_length=200)
   phone_regex = RegexValidator(regex=r'^\+?1?\d{10}$', message="Phone number must be of 10 digits")
   mobile = models.CharField(max_length=10,validators=[phone_regex])
   vehicle = models.ForeignKey(Vehicle,on_delete=models.CASCADE)
-  #gender = models.ForeignKey(Gender,on_delete=models.CASCADE)
   CHOICE = (('0','Male'),('1','Female'))
   gender = models.CharField(max_length=10,choices = CHOICE)
   DAYS = (('0','7 days'),('1','15 days'))
   days = models.CharField(max_length=10,choices = DAYS)
   date = models.DateField()
   city = models.ForeignKey(City,on_delete=models.CASCADE)
+
+  def __str__(self):
+      return self.name
 
 
 class Service(models.Model):
@@ -51,10 +45,10 @@ class Partner(models.Model):
   phone_regex = RegexValidator(regex=r'^\+?1?\d{10}$', message="Phone number must be of 10 digits")
   contact = models.CharField(max_length=10,validators=[phone_regex])
   service = models.ForeignKey(Service,on_delete=models.CASCADE)
-  #service = models.ManyToManyField(Service)
-  #service = models.CharField(max_length=1000)
   city = models.CharField(max_length=350)
   query = models.TextField(max_length=300)
+  def __str__(self):
+    return self.name
 
 class Chauffer(models.Model):
   name = models.CharField(max_length=200)
@@ -66,10 +60,16 @@ class Chauffer(models.Model):
   pincode = models.CharField(max_length=6)
   days = models.CharField(max_length=2)
   price = models.IntegerField()
+  
+  def __str__(self):
+    return self.name
+  
   @property
   def get_price(self):
     day = int(self.days)
     return 499*day
+  
+
 
   def save(self, *args, **kwargs):
     self.price = self.get_price
@@ -84,4 +84,5 @@ class Puc(models.Model):
   vehicle_no = models.CharField(max_length=20)
   exp_date = models.DateField()
   city = models.ForeignKey(City,on_delete=models.CASCADE)
-
+  def __str__(self):
+      return self.name

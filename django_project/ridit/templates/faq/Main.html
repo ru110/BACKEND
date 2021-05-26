@@ -1,0 +1,35 @@
+{% extends "ridit/base.html" %}
+{% load static %}
+  {% block content %}
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-12 mt-5 text-center">
+          <h1 class="about-head">FAQs - Ridit</h1> 
+          
+          <div class="text-muted">
+            <p>Having queries about our services;
+            Explore various FAQs and contact us directly when needed.</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <a href="{% url 'driveFAQ' %}">
+                <div class="card text-center text-primary">
+                  <h3>Driving School FAQs</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-sm-3">
+              <a href="{% url 'pucFAQ' %}">
+                <div class="card text-center text-primary">
+                  <h3>PUC FAQs</h3>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock content %}
