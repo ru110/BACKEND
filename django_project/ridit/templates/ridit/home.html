@@ -120,78 +120,93 @@
       <div class="row text-center mt-5 align-items-center" >
         <div class="col-12 col-sm-3 offset-md-1 me-md-5 mt-4">
           <a class='nav-link' href="{% url 'school' %}"> 
-            <div class="card">
+            <div class="card card-x">
               <img src="{% static 'images/undraw_fast_car_p4cu (1).svg' %}"  class="card-img-top " alt="undraw_fast_car_p4cu (1).svg">
               <div class="card-body">
-                <h5 class="card-title">Driving School</h5>
+                <h5 class="card-title-x">Driving School</h5>
               </div>
             </div>
           </a>
         </div>
         
         <div class="col-12 col-sm-3 me-md-5 mt-4 ">
-          <a class='nav-link' href="#"> 
-            <div class="card">
-              <img src="{% static 'images/undraw_subway_7vh7.svg' %}" class="card-img-top" alt="undraw_subway_7vh7.svg">
+          <a class='nav-link' href="{% url 'puc'%}"> 
+            <div class="card card-x">
+              <img src="{% static 'images/undraw_Order_ride_re_372k (1).svg' %}" class="card-img-top" alt="undraw_subway_7vh7.svg">
               <div class="card-body">
-                <h5 class="card-title">Book a Ride !</h5>
+                <h5 class="card-title-x">PUC & RTO </h5>
               </div>
             </div>
           </a>
           
         </div>
         <div class="col-12 col-sm-3 mt-4">
-          <a class='nav-link' href=".html"> 
-            <div class="card">
+          <a class='nav-link' href="{% url 'chauffer' %}"> 
+            <div class="card card-x">
               <img src="{% static 'images/undraw_electric_car_b7hl (1).svg' %}" class="card-img-top" alt="undraw_electric_car_b7hl (1).svg">
               <div class="card-body">
-                <h5 class="card-title">Chauffeur</h5>
+                <h5 class="card-title-x">Chauffeur</h5>
               </div>
             </div>
           </a>
         </div>
 
         <div class="col-12 col-sm-3 offset-md-1 mt-4 me-md-5">
-          <a class='nav-link' href="puc.html"> 
-            <div class="card">
-              <img src="{% static 'images/undraw_Order_ride_re_372k (1).svg' %}" class="card-img-top" alt="undraw_Order_ride_re_372k (1).svg">
+          <a class='nav-link' href="{% url 'soon' %}"> 
+            <div class="card card-x">
+              <img src="{% static 'images/undraw_subway_7vh7.svg' %}" class="card-img-top" alt="undraw_Order_ride_re_372k (1).svg">
               <div class="card-body">
-                <h5 class="card-title">PUC & RTO </h5>
+                <h5 class="card-title-x">Book a Ride </h5>
               </div>
             </div>
           </a>
         </div>
+
+
         <div class="col-12 col-sm-3 mt-4 me-md-5">
-          <a class='nav-link' href=".html"> 
-            <div class="card">
+          <a class='nav-link' href="{% url 'soon'%}"> 
+            <div class="card card-x">
               <img src="{% static 'images/undraw_certification_aif8.svg' %}" class="card-img-top" alt="undraw_certification_aif8.svg">
               <div class="card-body">
-                <h5 class="card-title">Insurance</h5>
+                <h5 class="card-title-x">Insurance</h5>
               </div>
             </div>
           </a>
         </div>
         <div class="col-12 col-sm-3 mt-4">
-          <a class='nav-link' href=".html"> 
-            <div class="card">
+          <a class='nav-link' href="{% url 'soon'%}"> 
+            <div class="card card-x">
               <img src="{% static 'images/undraw_Documents_re_isxv (1).svg' %}" class="card-img-top" alt="undraw_Documents_re_isxv (1).svg">
               <div class="card-body">
-                <h5 class="card-title">SVI</h5>
+                <h5 class="card-title-x">SVI</h5>
               </div>
             </div>
           </a>
         </div>
       </div>
-  
-  
+      
+      <div class="row mt-4" id="partner">
+        <div class="col-5 offset-sm-1">
+          <section class="display-6 ">
+            <p>Join our team and become a valuable member of our company.</p>
+          </section>
+        </div>
+        <div class="col-6 text-center mt-5">
+          <section class=''>
+            <button class='btn btn-lg btn-outline-primary'>
+              Join Us
+            </button>
+          </section>
+        </div>
+      </div>
+
       <!-- contact -->
-      <div class="row mt-5 title-banner" id='contact'>
+      <div class="row title-banner" id='contact'>
         <div class="col-12 text-center mt-5 mb-5 align-items-center ">
           <h1 class="mt-3">Contact Us</h1>
           <h2 class='mb-3'>Feel free to keep in touch with us!</h2>
         </div>
       </div>
-  
   
       <div class="row contact-container mt-2" >
         <div class="col-12 col-md-4 offset-md-1 mt-4">
@@ -254,9 +269,11 @@
   
       <div class="row mt-5 footer ">
         <div class="col-12 col-sm-4 text-center align-items-center">
-          <h4>
-            Ridit
-          </h4>
+          <h3 class='ms-5 text-white'>
+            <b>
+              Ridit
+            </b>
+          </h3>
           <ul class="nav ms-sm-5">
             <li>
               <a  class="nav-link" rel="nofollow" href="https://m.facebook.com/spotrentalco/"
@@ -282,15 +299,16 @@
         </div>
   
         <div class="col-6 col-sm-4">
-          <h4>Our Services</h4>
+          <h4 class='ms-5'>Our Services</h4>
           <ul>
-            <li> <a href="booking.html">Booking</a> </li>
-            <li> <a href="driving.html">Driving School</a> </li>
-            <li> <a href="chauffeur.html">Chauffeurs</a> </li>
-            <li> <a href="puc.html">PUC & RTO </a> </li>
-            <li> <a href="insurance.html">Insurance </a> </li>
-            <li> <a href="svi.html">SVI & Traffic rules</a></li>
-            <li> <a href="TNC.html">Terms & Conditions</a></li>
+            <li> <a href="{% url 'faq'%}">FAQs</a></li>
+            <li> <a href="{% url 'partner' %}">Become our Partner</a> </li>
+            <li> <a href="{% url 'school' %}">Driving School</a> </li>
+            <li> <a href="{% url 'chauffer'%}">Chauffeurs</a> </li>
+            <li> <a href="{% url 'puc'%}">PUC & RTO </a> </li>
+            <li> <a href="{% url 'soon'%}">Insurance </a> </li>
+            <li> <a href="{% url 'soon'%}">SVI & Traffic rules</a></li>
+            <li> <a href="{% url 'soon'%}">Terms & Conditions</a></li>
           </ul>
         </div>
         <div class="col-6 col-sm-4">
@@ -303,7 +321,7 @@
           </ul>
         </div>
         
-        <div class="col-12 mt-4 mb-4 text-center">
+        <div class="col-12 mt-4 mb-4 text-center text-white">
           Copyright © 2021 S19 Mobility Pvt Ltd.
         </div>
       </div>

@@ -20,7 +20,6 @@ class DriveForm(forms.ModelForm):
             'days' : 'Duration',
             'city' : 'City'
         }
-      
 
     def __init__(self, *args, **kwargs):
         super(DriveForm,self).__init__(*args, **kwargs)
@@ -62,7 +61,6 @@ class ChaufferForm(forms.ModelForm):
             'days' : 'Duration (in days)',
             'pincode' : 'Pincode'
         }
-      
 
     def __init__(self, *args, **kwargs):
         super(ChaufferForm,self).__init__(*args, **kwargs)
@@ -80,7 +78,6 @@ class PucForm(forms.ModelForm):
             'exp_date' : 'Expiry Date',
             'city' : 'City'
         }
-      
 
     def __init__(self, *args, **kwargs):
         super(PucForm,self).__init__(*args, **kwargs)

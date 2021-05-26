@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import School
 from .models import Partner
+from .models import Puc
 from .forms import DriveForm
 from .forms import PartnerForm
 from .forms import ChaufferForm
@@ -100,7 +101,7 @@ def chauffer(request):
             day = request.POST['days']
             total = 499 * int(day)
             name = request.POST['name']
-            return render(request,"ridit/ch.html",{'name':name,'total':total})
+            return render(request,"ridit/success.html",{'name':name,'total':total})
     else:
         form = ChaufferForm()
         return render(request,"ridit/chauffer.html",{'form':form})
@@ -127,3 +128,13 @@ def puc(request, id=0):
         else:
             # messages.error(request,'error')
             return render(request, "ridit/puc.html", {'form': form})
+
+def faq(request):
+    return render(request,"faq/Main.html")
+
+def driveFAQ(request):
+    return render(request,"faq/driveFAQ.html")
+def pucFAQ(request):
+    return render(request,"faq/pucFAQ.html")
+def comming_soon(request):
+    return render(request,"ridit/soon.html")

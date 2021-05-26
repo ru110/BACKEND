@@ -40,6 +40,9 @@
       
       <div class="collapse navbar-collapse" id="NSC">
         <ul class="navbar-nav me-auto ">
+          <li class="nav-item ms-sm-4">
+            <a class="nav-link" href="{% url 'partner' %}"> Become our partner </a> 
+          </li>
         </ul>
         
         <ul class='navbar-nav'>
@@ -50,15 +53,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'school' %}">Driving School</a>
           </li>
-          
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#services">Our Services</a>
-          </li>
-          
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link" href="{% url 'faq' %}">FAQs</a>
           </li>
-          -->
+          
           
           {% if user.is_authenticated %}
             <li class="nav-item">
