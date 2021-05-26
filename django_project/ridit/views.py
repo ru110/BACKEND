@@ -64,21 +64,17 @@ def partner(request, id=0):
         else:
             # messages.error(request,'error')
             return render(request, "ridit/partner.html", {'form': form})
-'''
+
 @login_required
 def chauffer(request, id=0):
     if request.method == "GET":
-        #days = request.GET['days']
-        total = 499 * 1
         if id == 0:
             form = ChaufferForm()
         else:
             employee = Chauffer.objects.get(pk=id)
             form = ChaufferForm(instance=employee)
-        return render(request, "ridit/chauffer.html", {'form': form,'total':total})
+        return render(request, "ridit/chauffer.html", {'form': form})
     else:
-        #days= request.POST['days']
-        total = 499 * 1
         if id == 0:
             form = ChaufferForm(request.POST)
         else:
@@ -86,25 +82,13 @@ def chauffer(request, id=0):
             form = ChaufferForm(request.POST,instance= employee)
         if form.is_valid():
             form.save()
-            # messages.success(request, 'Your request is submitted successfully')
-            return redirect('/success')
-        else:
-            # messages.error(request,'error')
-            return render(request, "ridit/chauffer.html", {'form': form,'total':total})'''
-
-@login_required
-def chauffer(request):
-    if request.method=='POST':
-        form = ChaufferForm(request.POST)
-        if form.is_valid():
-            form.save()
             day = request.POST['days']
             total = 499 * int(day)
-            name = request.POST['name']
-            return render(request,"ridit/success.html",{'name':name,'total':total})
-    else:
-        form = ChaufferForm()
-        return render(request,"ridit/chauffer.html",{'form':form})
+            # messages.success(request, 'Your request is submitted successfully')
+            return render(request,"ridit/ch.html",{'total':total})
+        else:
+            # messages.error(request,'error')
+            return render(request, "ridit/chauffer.html", {'form': form})
 
 @login_required
 def puc(request, id=0):
@@ -123,11 +107,46 @@ def puc(request, id=0):
             form = PucForm(request.POST,instance= employee)
         if form.is_valid():
             form.save()
+            vtype = request.POST['vehicle_type']
+            total = 0
+            if vtype=='2w':
+                total=50
+            elif vtype=='3w':
+                total=150
+            elif vtype=='4w':
+                total=200
+            elif vtype=='4cw':
+                total=250
+            else:
+                total=500
             # messages.success(request, 'Your request is submitted successfully')
-            return redirect('/success')
+            return render(request,"ridit/p1.html",{'total':total})
         else:
             # messages.error(request,'error')
             return render(request, "ridit/puc.html", {'form': form})
+
+'''@login_required
+def puc(request, id=0):
+    if request.method=='POST':
+        form = PucForm(request.POST)
+        if form.is_valid():
+            form.save()
+            vtype = request.POST['vehicle_type']
+            total = 0
+            if vtype=='2w':
+                total=50
+            elif vtype=='3w':
+                total=150
+            elif vtype=='4w':
+                total=200
+            elif vtype=='4cw':
+                total=250
+            else:
+                total=500
+            return render(request,"ridit/p1.html",{'total':total})
+    else:
+        form = PucForm()
+        return render(request,"ridit/puc.html",{'form':form})'''
 
 def faq(request):
     return render(request,"faq/Main.html")

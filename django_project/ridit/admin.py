@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 from .models import School
-from .models import Vehicle
 from .models import City
 from .models import Partner
 from .models import Service
@@ -10,7 +9,6 @@ from .models import Puc
 # Register your models here.
 
 admin.site.register(School)
-admin.site.register(Vehicle)
 admin.site.register(City)
 admin.site.register(Partner)
 admin.site.register(Service)

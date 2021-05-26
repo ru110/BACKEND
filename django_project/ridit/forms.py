@@ -39,7 +39,7 @@ class PartnerForm(forms.ModelForm):
                   'city':'Enter the cities in which you provide your services',
                   'query' : 'Enter your query'
                   }
-        widgets = {'query': forms.Textarea(attrs={'placeholder': 'If you provide any additional service then please mention heren'})
+        widgets = {'query': forms.Textarea(attrs={'placeholder': 'If you provide any additional service then please mention here'})
                }
 
     def __init__(self, *args, **kwargs):
@@ -58,7 +58,7 @@ class ChaufferForm(forms.ModelForm):
             'contact':'Mobile No',
             'address' : 'Address',
             'date' : 'Expected Date',
-            'days' : 'Duration (in days)',
+            'days' : 'Enter no of days',
             'pincode' : 'Pincode'
         }
 
@@ -70,11 +70,12 @@ class PucForm(forms.ModelForm):
 
     class Meta:
         model = Puc
-        fields = ('name','contact','vehicle_no','exp_date','city')
+        fields = ('name','contact','vehicle_no','exp_date','city','vehicle_type')
         labels = {
             'name':'Full Name',
             'contact':'Mobile No',
             'vehicle_no' : 'Vehicle No',
+            'vehicle_type':'Vehicle Type',
             'exp_date' : 'Expiry Date',
             'city' : 'City'
         }
