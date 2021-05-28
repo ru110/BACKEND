@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator,MaxValueValidator, MinValueValidator
+from django.core.validators import RegexValidator,MaxValueValidator, MinValueValidator,validate_email
 
 class City(models.Model):
   id = models.IntegerField(primary_key=True, unique = True)
@@ -9,17 +9,24 @@ class City(models.Model):
   def __str__(self):
     return self.title
 
+def validateEmail(value):
+  try:
+    validate_email(value)
+  except ValidationError as e:
+    print("bad email, details:", e)
+  else:
+    print("good email")
+
 class School(models.Model):
   name = models.CharField(max_length=200)
-  email = models.EmailField(max_length=200)
+  email = models.EmailField(max_length=200,validators=[validateEmail])
   phone_regex = RegexValidator(regex=r'^\+?1?\d{10}$', message="Phone number must be of 10 digits")
   mobile = models.CharField(max_length=10,validators=[phone_regex])
-  VEHICLE = (('0','Two Wheeler'),('1','Four Wheeler'))
+  VEHICLE = (('2w','2 wheeler'),('3w','3 wheeler'),('4w','4 wheeler'),('4cw','4 Wheeler Commercials'),('hw','Heavy Wheeler'))
   vehicle = models.CharField(max_length=20,choices=VEHICLE)
   CHOICE = (('0','Male'),('1','Female'))
   gender = models.CharField(max_length=10,choices = CHOICE)
-  DAYS = (('0','7 days'),('1','15 days'))
-  days = models.CharField(max_length=10,choices = DAYS)
+  days=models.IntegerField(validators=[MinValueValidator(7),MaxValueValidator(30)])
   date = models.DateField()
   city = models.ForeignKey(City,on_delete=models.CASCADE)
 
