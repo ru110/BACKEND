@@ -57,7 +57,7 @@ class ChaufferForm(forms.ModelForm):
             'email':'Email Id',
             'contact':'Mobile No',
             'address' : 'Address',
-            'date' : 'Expected Date',
+            'date' : 'Starting Date',
             'days' : 'Enter no of days',
             'pincode' : 'Pincode'
         }

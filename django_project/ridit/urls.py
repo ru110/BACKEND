@@ -13,4 +13,5 @@ urlpatterns = [
   path('faq/',views.faq,name='faq'),
   path('drivingfaq/',views.driveFAQ,name='driveFAQ'),
   path('pucfaq/',views.pucFAQ,name='pucFAQ'),
+  path('chauffeurfaq/',views.chauffeurFAQ,name='chauffeurFAQ'),
 ]

@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import School
 from .models import Partner
-from .models import Puc
+from .models import Puc,Chauffer
 from .forms import DriveForm
 from .forms import PartnerForm
 from .forms import ChaufferForm
@@ -125,28 +125,7 @@ def puc(request, id=0):
             # messages.error(request,'error')
             return render(request, "ridit/puc.html", {'form': form})
 
-'''@login_required
-def puc(request, id=0):
-    if request.method=='POST':
-        form = PucForm(request.POST)
-        if form.is_valid():
-            form.save()
-            vtype = request.POST['vehicle_type']
-            total = 0
-            if vtype=='2w':
-                total=50
-            elif vtype=='3w':
-                total=150
-            elif vtype=='4w':
-                total=200
-            elif vtype=='4cw':
-                total=250
-            else:
-                total=500
-            return render(request,"ridit/p1.html",{'total':total})
-    else:
-        form = PucForm()
-        return render(request,"ridit/puc.html",{'form':form})'''
+
 
 def faq(request):
     return render(request,"faq/Main.html")
@@ -155,5 +134,9 @@ def driveFAQ(request):
     return render(request,"faq/driveFAQ.html")
 def pucFAQ(request):
     return render(request,"faq/pucFAQ.html")
+
+def chauffeurFAQ(request):
+    return render(request,"faq/chauffeurFAQ.html")
+
 def comming_soon(request):
     return render(request,"ridit/soon.html")
