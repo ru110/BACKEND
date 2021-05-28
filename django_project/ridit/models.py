@@ -58,7 +58,7 @@ class Chauffer(models.Model):
   address = models.CharField(max_length=400)
   date = models.DateField()
   pincode = models.CharField(max_length=6)
-  #days = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(30)])
+
   days=models.IntegerField(validators=[validate_range])
   price = models.IntegerField()
   

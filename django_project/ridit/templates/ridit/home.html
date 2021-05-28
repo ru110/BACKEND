@@ -92,16 +92,16 @@
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="Thome" role="tabpanel" aria-labelledby="home-tab">
               We are on mission to provide you the best services related to driving schools, chauffeur, Legal paper works and many more. <br>
-              <a href="#" class="about-link" target="_blank" rel="noopener noreferrer">Chauffeur</a> :-Ridit brings you the most elite Professional chauffeur services all around India. Comfort is something that is never compromised when travelling in our Chauffeur driven luxury cars.
+              <a href="#" class="about-link" rel="noopener noreferrer">Chauffeur</a> :-Ridit brings you the most elite Professional chauffeur services all around India. Comfort is something that is never compromised when travelling in our Chauffeur driven luxury cars.
               Ridit provides you with the Finest chauffeurs that has everything it takes to deliver a top-class service.
             </div>
             <div class="tab-pane fade" id="Tprofile" role="tabpanel" aria-labelledby="profile-tab">
-              <a href="#" class="about-link" target="_blank" rel="noopener noreferrer">Driving School</a>:- Learning how to drive successfully is a daunting task, but an important one nonetheless.After all in driving it’s not just about you, but the safety of others on the road as well.
+              <a href="#" class="about-link" rel="noopener noreferrer">Driving School</a>:- Learning how to drive successfully is a daunting task, but an important one nonetheless.After all in driving it’s not just about you, but the safety of others on the road as well.
               One needs professional training, which one can get only at a driving school. How many of us can confidently claim that they can clear a traffic signs test? The fact is very few.
               We go beyond teaching just the controls of the car. We believe on teaching our learners how to use those controls effortlessly. We teach our learners to respect other driver’s rights while understanding the responsibilities of a driver.
             </div>
             <div class="tab-pane fade" id="Tcontact" role="tabpanel" aria-labelledby="contact-tab">
-              <a href="#" class="about-link" target="_blank" rel="noopener noreferrer">PUC</a>:- Pollution Under Control (PUC) Certificate. The PUC test assesses the emission of a vehicle and checks if it follows the standard pollution regulation. In India, a valid driving license, insurance coverage and a Pollution Under Control Certificate are legal mandatory requirements for a car.
+              <a href="#" class="about-link" rel="noopener noreferrer">PUC</a>:- Pollution Under Control (PUC) Certificate. The PUC test assesses the emission of a vehicle and checks if it follows the standard pollution regulation. In India, a valid driving license, insurance coverage and a Pollution Under Control Certificate are legal mandatory requirements for a car.
             Insurance:-We are on a mission to provide you the best insurance available at the best prices for you.
             </div>
           </div>
@@ -185,23 +185,10 @@
         </div>
       </div>
       
-      <div class="row mt-4" id="partner">
-        <div class="col-5 offset-sm-1">
-          <section class="display-6 ">
-            <p>Join our team and become a valuable member of our company.</p>
-          </section>
-        </div>
-        <div class="col-6 text-center mt-5">
-          <section class=''>
-            <button class='btn btn-lg btn-outline-primary'>
-              Join Us
-            </button>
-          </section>
-        </div>
-      </div>
+
 
       <!-- contact -->
-      <div class="row title-banner" id='contact'>
+      <div class="row title-banner mt-5" id='contact'>
         <div class="col-12 text-center mt-5 mb-5 align-items-center ">
           <h1 class="mt-3">Contact Us</h1>
           <h2 class='mb-3'>Feel free to keep in touch with us!</h2>
@@ -267,7 +254,24 @@
         </div>
       </div>
   
-      <div class="row mt-5 footer ">
+
+      <div class="row mt-4" id="partner">
+        <div class="col-5 offset-sm-1">
+          <section class="display-6 join-post">
+            <p>Join our team and become a valuable member of our company.</p>
+          </section>
+        </div>
+        <div class="col-6 text-center mt-5">
+          <section class=''>
+            <button class='btn btn-lg btn-outline-primary join-btn'>
+              Join Us
+            </button>
+          </section>
+        </div>
+      </div>
+
+
+      <div class="row  footer ">
         <div class="col-12 col-sm-4 text-center align-items-center">
           <h3 class='ms-5 text-white'>
             <b>
@@ -276,22 +280,23 @@
           </h3>
           <ul class="nav ms-sm-5">
             <li>
-              <a  class="nav-link" rel="nofollow" href="https://m.facebook.com/spotrentalco/"
+              <a  class="nav-link" rel="nofollow" href="https://m.facebook.com/riditdrivingschool/?ref=bookmarks"
                 ><i class="fa fa-facebook-square"></i
               ></a>
             </li>
             <li>
-              <a class="nav-link" rel="nofollow" href="https://mobile.twitter.com/spotrentalco?lang=en"
+              <a class="nav-link" rel="nofollow" href="https://mobile.twitter.com/_myridit_"
                 ><i class="fa fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a class="nav-link" rel="nofollow" href="https://www.linkedin.com/company/spotrental">
+              <!-- <a class="nav-link" rel="nofollow" href="https://www.linkedin.com/company/spotrental"> -->
+              <a class="nav-link" rel="nofollow" href="{% url 'soon' %}">
                 <i class="fa fa-linkedin"></i
               ></a>
             </li>
             <li>
-              <a class="nav-link" rel="nofollow" href="https://www.instagram.com/spotrental/?hl=en">
+              <a class="nav-link" rel="nofollow" href="https://instagram.com/my_ridit?igshid=ygj7biwh1ykx">
                 <i class="fa fa-instagram"></i>
               </a>
             </li>
@@ -299,7 +304,7 @@
         </div>
   
         <div class="col-6 col-sm-4">
-          <h4 class='ms-5'>Our Services</h4>
+          <h4 class='ms-4'>Our Services</h4>
           <ul>
             <li> <a href="{% url 'faq'%}">FAQs</a></li>
             <li> <a href="{% url 'partner' %}">Become our Partner</a> </li>

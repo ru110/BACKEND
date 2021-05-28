@@ -10,22 +10,20 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/media/admin/css/forms.css"/>
-<link rel="stylesheet" type="text/css" href="/media/admin/css/base.css"/>
-<link rel="stylesheet" type="text/css" href="/media/admin/css/global.css"/>
-<link rel="stylesheet" type="text/css" href="/media/admin/css/widgets.css"/>
-<script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-<script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
-<link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
-<style>.calendar>table>caption{caption-side:unset}</style><!--caption fix for bootstrap4-->
+    <link rel="stylesheet" type="text/css" href="/media/admin/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/media/admin/css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="/media/admin/css/widgets.css"/>
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
+    <style>.calendar>table>caption{caption-side:unset}</style><!--caption fix for bootstrap4-->
 {{ form.media }}        
 
 <body>
     <div class="container">
         <div class="col-md-10 offset-md-1 mt-5">
             <div class="jumbotron">
-                <!-- <h1 class="display-4"> DRIVING SCHOOL FORM</h1> -->
-                <!-- <p class="lead font-italic">Think safe. Drive safe. Your key to safe driving.</p> -->
-                <!-- <hr class="my-4"> -->
+
                 {% block content %}
                 {% endblock content %}
             </div>
