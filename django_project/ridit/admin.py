@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import School
+from .models import School,Contact
 from .models import City
 from .models import Partner
 from .models import Service
@@ -14,3 +14,4 @@ admin.site.register(Partner)
 admin.site.register(Service)
 admin.site.register(Chauffer)
 admin.site.register(Puc)
+admin.site.register(Contact)

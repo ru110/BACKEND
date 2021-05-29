@@ -25,7 +25,7 @@ MESSAGE_TAGS = {
         messages.SUCCESS: 'alert-success',
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
- }
+}
 
 # Application definition
 
@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    #
     'ridit',
     'users',
-    'demo',
-    #'employee_reg'
+    
 ]
 
 MIDDLEWARE = [
