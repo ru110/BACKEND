@@ -5,7 +5,6 @@ from django.views.i18n import JavaScriptCatalog
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
-from demo import views as demo_views
 from ridit import views as ridit_views
 #from employee_reg import views as emp_views
 urlpatterns = [
@@ -21,8 +20,7 @@ urlpatterns = [
     path('partner/', ridit_views.partner, name='partner'),
     path('ch/', ridit_views.ch, name='ch'),
     path('success/', ridit_views.ch, name='success'),
-    path('custom/', demo_views.custom , name='custom'),
-    #path('empform/',emp_views.empform,name='empform'),
+    
     path('jsi18n', JavaScriptCatalog.as_view(), name='javascript-catalog'),#for datepicker functionality in forms
 ]
 

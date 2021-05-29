@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import School
+from .models import School,Contact
 from .models import Partner
 from .models import Puc,Chauffer
 from .forms import DriveForm
@@ -11,7 +11,21 @@ from .forms import ChaufferForm
 from .forms import PucForm
 # Create your views here.
 def home(request):
-	return render(request,'ridit/home.html')
+    if request.method == 'POST' and 'ContactForm' in request.POST:
+        contact = Contact()
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        comment = request.POST.get('comment')
+        phone = request.POST.get('phone')
+
+        contact.name = name
+        contact.email = email
+        contact.comment = comment
+        contact.phone = phone
+        contact.save()
+        return render(request,'ridit/success.html')
+	
+    return render(request,'ridit/home.html')
 	
 @login_required
 def school(request, id=0):
@@ -137,6 +151,9 @@ def pucFAQ(request):
 
 def chauffeurFAQ(request):
     return render(request,"faq/chauffeurFAQ.html")
+
+def LicenseFAQ(request):
+    return render(request,"faq/licenseFAQ.html")
 
 def comming_soon(request):
     return render(request,"ridit/soon.html")

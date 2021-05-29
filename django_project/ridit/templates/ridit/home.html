@@ -221,39 +221,37 @@
             </li>
           </ul>
         </div>
-  
+
         <div class="col-12 col-md-6 mt-4">
-          <form>
-              <div class="form-floating mt-4 mb-2">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Your Full Name">
-                <label for="floatingInput">Name</label>
-              </div>
-  
-              
-              <div class="form-floating mb-2 ">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-  
-              
-              <div class="form-floating mb-2">
-                <input type="tel" class="form-control" id="floatingPassword" placeholder="Mobile Number">
-                <label for="floatingPassword">Mobile Number</label>
-              </div>
-              
-              <div class="form-floating mb-2">
-                <textarea class="form-control" placeholder="Leave your message here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Comments</label>
-              </div>
+          <form method="post" action="#">
+            {% csrf_token %}
+            <div class="form-floating mt-4 mb-2">
+              <input name="name" type="text" class="form-control" id="floatingInput" placeholder="Your Full Name">
+              <label for="floatingInput">Name</label>
+            </div>
+
             
+            <div class="form-floating mb-2 ">
+              <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
             
+            <div class="form-floating mb-2">
+              <input name="phone" type="tel" class="form-control" id="floatingPassword" placeholder="Mobile Number">
+              <label for="floatingPassword">Mobile Number</label>
+            </div>
             
-              <button class="btn btn-lg btn-outline-primary mt-3 mb-4" type="submit">Send Message</button>
-            </form>
+            <div class="form-floating mb-2">
+              <textarea name="comment" class="form-control" placeholder="Leave your message here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
           
+            <button name='ContactForm' class="btn btn-lg btn-outline-primary mt-3 mb-4" type="submit">Send Message</button>
+          </form>
+
         </div>
       </div>
-  
+
 
       <div class="row mt-4" id="partner">
         <div class="col-5 offset-sm-1">
@@ -263,13 +261,12 @@
         </div>
         <div class="col-6 text-center mt-5">
           <section class=''>
-            <button class='btn btn-lg btn-outline-primary join-btn'>
+            <a href="{% url 'partner' %}" class='btn btn-lg btn-outline-primary join-btn'>
               Join Us
-            </button>
+            </a>
           </section>
         </div>
       </div>
-
 
       <div class="row  footer ">
         <div class="col-12 col-sm-4 text-center align-items-center">
