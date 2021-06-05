@@ -28,6 +28,7 @@ class Contact(models.Model):
 
 
 class School(models.Model):
+  #uuid=models.CharField(unique=True,max_length=100)
   name = models.CharField(max_length=200)
   email = models.EmailField(max_length=200,validators=[validateEmail])
   phone_regex = RegexValidator(regex=r'^\+?1?\d{10}$', message="Phone number must be of 10 digits")
@@ -56,7 +57,7 @@ class Partner(models.Model):
   phone_regex = RegexValidator(regex=r'^\+?1?\d{10}$', message="Phone number must be of 10 digits")
   contact = models.CharField(max_length=10,validators=[phone_regex])
   service = models.ForeignKey(Service,on_delete=models.CASCADE)
-  city = models.CharField(max_length=350)
+  city = models.ForeignKey(City,on_delete=models.CASCADE)
   query = models.TextField(max_length=300)
   def __str__(self):
     return self.name

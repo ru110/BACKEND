@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DCS-Services</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -17,6 +17,7 @@
     <script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
     <style>.calendar>table>caption{caption-side:unset}
+<<<<<<< Updated upstream
 /* .btn.btn-success {
   color: #fff;
   background-color: #1E90FF;
@@ -39,6 +40,9 @@
   border-color:#1E90FF;
 } */
 
+=======
+
+>>>>>>> Stashed changes
 </style><!--caption fix for bootstrap4-->
 {{ form.media }}        
 
@@ -46,9 +50,9 @@
     <div class="container">
         <div class="col-md-10 offset-md-1 mt-5">
             <div class="jumbotron">
-
-                {% block content %}
-                {% endblock content %}
+{% block content %}
+     {% endblock content %}           
+                
             </div>
         </div>
     </div>

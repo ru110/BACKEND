@@ -19,15 +19,41 @@
 
   <link rel="stylesheet" href="{% static 'ridit/base.css' %}">
   <link rel="stylesheet" href="{% static 'ridit/main.css' %}">
+  <style type="text/css">
+    .custom-text{
+       font-size: 55px;
+            font-family: serif;
+            font-weight: bold;
+            color: transparent;
+            text-align: center;
+            animation: effect 3s linear infinite;
+            \ 
+    }
+     @keyframes effect {
+        0% {
+                background: linear-gradient(
+                       #3CE7D7,#6495ED,#8A2BE2);
+                -webkit-background-clip: text;
+            }
   
-  <title>DCS-Driven Chauffeurs Service</title>
+            100% {
+                background: linear-gradient(
+                        #3CE7D7,#6495ED,#8A2BE2);
+                -webkit-background-clip: text;
+            }
+        }
+    }
+  </style>
+ 
+  
+  <title >DCS-Driven Chauffeurs Service</title>
 </head>
 
 <body>
   <nav class="navbar  navbar-expand-md navbar-light bg-custom fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand ms-sm-5" href="{% url 'ridit-home' %}">
-        DCS
+      <a class="navbar-brand ms-sm-5 " href="{% url 'ridit-home' %}">
+     <span class="custom-text">DCS</span>
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -51,7 +77,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'school' %}">Driving School</a>
+            <a class="nav-link" href="#services">Our Services</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'faq' %}">FAQs</a>

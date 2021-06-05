@@ -20,6 +20,7 @@ class DriveForm(forms.ModelForm):
             'days' : 'Duration',
             'city' : 'City'
         }
+        #widgets = {'uuid': forms.HiddenInput()}
 
     def __init__(self, *args, **kwargs):
         super(DriveForm,self).__init__(*args, **kwargs)
@@ -45,6 +46,7 @@ class PartnerForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(PartnerForm,self).__init__(*args,**kwargs)
         self.fields['service'].empty_label="Select"
+        self.fields['city'].empty_label = "Select"
 
 
 class ChaufferForm(forms.ModelForm):

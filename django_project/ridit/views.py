@@ -57,7 +57,17 @@ def ch(request):
     return render(request,"ridit/ch.html")
 
 @login_required
-def partner(request, id=0):
+def partner(request):
+    c = Partner()
+    form=PartnerForm(request.POST or None, instance=c)
+    if request.method=="POST":
+        #print("success")
+        if form.is_valid():
+            f=form.save()
+            f.save()
+            return redirect('/success')
+    return render(request, "ridit/partner.html", {'form':form})
+'''def partner(request, id=0):
     if request.method == "GET":
         if id == 0:
             form = PartnerForm()
@@ -78,7 +88,7 @@ def partner(request, id=0):
         else:
             # messages.error(request,'error')
             return render(request, "ridit/partner.html", {'form': form})
-
+'''
 @login_required
 def chauffer(request, id=0):
     if request.method == "GET":
