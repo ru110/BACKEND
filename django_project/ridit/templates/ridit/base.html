@@ -20,31 +20,28 @@
   <link rel="stylesheet" href="{% static 'ridit/base.css' %}">
   <link rel="stylesheet" href="{% static 'ridit/main.css' %}">
   <style type="text/css">
-    .custom-text{
-       font-size: 55px;
-            font-family: serif;
-            font-weight: bold;
-            color: transparent;
-            text-align: center;
-            animation: effect 3s linear infinite;
-            \ 
-    }
-     @keyframes effect {
-        0% {
-                background: linear-gradient(
-                       #3CE7D7,#6495ED,#8A2BE2);
-                -webkit-background-clip: text;
-            }
-  
-            100% {
-                background: linear-gradient(
-                        #3CE7D7,#6495ED,#8A2BE2);
-                -webkit-background-clip: text;
-            }
+  .custom-text{
+      font-size: 3rem;
+      font-family: serif;
+      font-weight: bold;
+      color: transparent;
+      text-align: center;
+      animation: effect 3s linear infinite;
+  }
+  @keyframes effect {
+    0% {
+            background: linear-gradient(
+                    #3CE7D7,#6495ED,#8A2BE2);
+            -webkit-background-clip: text;
+        }
+
+        100% {
+            background: linear-gradient(
+                    #3CE7D1,#6495FF,#8A2B00);
+            -webkit-background-clip: text;
         }
     }
   </style>
- 
   
   <title >DCS-Driven Chauffeurs Service</title>
 </head>
@@ -76,9 +73,9 @@
             <a class="nav-link" href="{% url 'ridit-home' %}">Home</a>
           </li>
           
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#services">Our Services</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'faq' %}">FAQs</a>
           </li>
