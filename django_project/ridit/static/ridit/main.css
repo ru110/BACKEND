@@ -54,7 +54,7 @@ body{
 }
 .abouth{
   margin-top: 650px;
-font-weight: 700;
+  font-weight: 700;
   font-size: 2.5rem;
   color: #5e5e5e;
 }
@@ -231,9 +231,9 @@ font-weight: 700;
 .join-btn{
   color: #010101;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  font-family: "Roboto",sans-serif;
+  font-family: "open sans",sans-serif;
   border: 1.5px solid #030303;
   padding: 0.8rem;
   width: 60%;
